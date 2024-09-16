@@ -13,9 +13,9 @@ interface AllQuestionsProps {
 
 function AllQuestions({ selectedTopicData }: AllQuestionsProps) {
   return (
-    <div className="overflow-y-auto max-h-72 custom-scrollbar">
+    <div className="overflow-y-auto custom-scrollbar h-48 md:h-72">
       {selectedTopicData?.questions?.map((item) => (
-        <div key={item.id} className="mb-4 p-4 bg-gray-900 rounded-lg">
+        <div key={item.id} className="m-4 p-2 bg-gray-900 rounded-lg text-base">
           <div>{item.question}</div>
         </div>
       ))}

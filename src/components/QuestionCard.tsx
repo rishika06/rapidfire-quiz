@@ -3,7 +3,7 @@ interface QuestionCardProps {
 }
 
 function QuestionCard({ question }: QuestionCardProps) {
-  return <div>{question?.question}</div>;
+  return <div className="p-3">{question?.question}</div>;
 }
 
 export default QuestionCard;
