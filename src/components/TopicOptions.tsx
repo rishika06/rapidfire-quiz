@@ -30,7 +30,7 @@ function TopicOptions({ setTopic, topic, startQuiz }: TopicOptionsProps) {
       {topicOptions.map((item) => (
         <button
           className={`relative inline-block  mx-2 p-[2px] rounded-lg bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-500 ${
-            startQuiz ? "cursor-not-allowed" : ""
+            startQuiz ? "cursor-not-allowed opacity-50" : ""
           } `}
           key={item.id}
           onClick={() => setTopic(item.value)}
@@ -38,14 +38,8 @@ function TopicOptions({ setTopic, topic, startQuiz }: TopicOptionsProps) {
         >
           <span
             className={`flex items-center justify-center py-1 rounded-lg 
-              ${
-                item.value === topic
-                  ? "bg-slate-800"
-                  : startQuiz
-                  ? "bg-gray-500"
-                  : "bg-slate-950"
-              } 
-              ${!startQuiz && "hover:bg-slate-800 transition-all duration-300"}
+              ${item.value === topic ? "bg-slate-600" : "bg-slate-950"} 
+              ${!startQuiz && "hover:bg-slate-600 transition-all duration-300"}
             `}
           >
             {topicIcon(item.value)}
