@@ -59,7 +59,7 @@ function App() {
   return (
     <div className="h-screen max-h-full bg-slate-950 text-white px-8 py-8">
       <h1 className="text-center text-lg md:text-xl bg-slate-900 rounded-lg py-2">
-        RapidFire Coding Quiz
+        Rapidfire Quiz
       </h1>
       <div className="grid grid-cols-2 gap-4 mt-12 md:grid-cols-4">
         <TopicOptions setTopic={setTopic} topic={topic} startQuiz={startQuiz} />
