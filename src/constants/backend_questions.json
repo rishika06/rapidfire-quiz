@@ -1,0 +1,228 @@
+{
+  "topics": [
+    {
+      "name": "nodejs",
+      "questions": {
+        "easy": [
+          { "id": 1, "question": "What is Node.js?" },
+          {
+            "id": 2,
+            "question": "How does Node.js handle asynchronous operations?"
+          },
+          { "id": 3, "question": "What is the event loop in Node.js?" },
+          {
+            "id": 4,
+            "question": "What are callbacks and how do they work in Node.js?"
+          },
+          {
+            "id": 5,
+            "question": "What are Promises and how do they improve upon callbacks?"
+          }
+        ],
+        "medium": [
+          {
+            "id": 6,
+            "question": "Explain the concept of middleware in Express.js."
+          },
+          {
+            "id": 7,
+            "question": "What is npm and what role does it play in Node.js?"
+          },
+          {
+            "id": 8,
+            "question": "How can you create a simple HTTP server in Node.js?"
+          },
+          {
+            "id": 9,
+            "question": "What is the difference between synchronous and asynchronous functions in Node.js?"
+          }
+        ],
+        "difficult": [
+          { "id": 10, "question": "What are Streams in Node.js?" },
+          { "id": 11, "question": "Explain what a Buffer is in Node.js." },
+          {
+            "id": 12,
+            "question": "What is the purpose of the process object in Node.js?"
+          },
+          {
+            "id": 13,
+            "question": "How do you handle errors in Node.js applications?"
+          },
+          { "id": 14, "question": "What is REPL in Node.js?" },
+          { "id": 15, "question": "How does Node.js support multi-threading?" }
+        ]
+      }
+    },
+    {
+      "name": "databases",
+      "questions": {
+        "easy": [
+          { "id": 1, "question": "What is a Database?" },
+          { "id": 2, "question": "What is DBMS and what is its utility?" },
+          {
+            "id": 3,
+            "question": "What are the advantages of DBMS over traditional file-based systems?"
+          },
+          {
+            "id": 4,
+            "question": "What is a Database Schema and why is it important?"
+          },
+          {
+            "id": 5,
+            "question": "Explain the difference between a primary key and a foreign key."
+          }
+        ],
+        "medium": [
+          {
+            "id": 6,
+            "question": "What are clustered and non-clustered indexes?"
+          },
+          {
+            "id": 7,
+            "question": "Explain the concept of database transactions and their importance."
+          },
+          { "id": 8, "question": "What are ACID properties in DBMS?" },
+          {
+            "id": 9,
+            "question": "What is normalization and why is it important?"
+          }
+        ],
+        "difficult": [
+          {
+            "id": 10,
+            "question": "How to design a database schema for a highly scalable web application?"
+          },
+          {
+            "id": 11,
+            "question": "What is denormalization and when would you use it?"
+          },
+          {
+            "id": 12,
+            "question": "Explain the difference between OLTP and OLAP databases."
+          },
+          {
+            "id": 13,
+            "question": "What is query optimization and how can it be achieved?"
+          },
+          {
+            "id": 14,
+            "question": "Describe the three levels of data abstraction in a DBMS."
+          },
+          {
+            "id": 15,
+            "question": "What are super keys, primary keys, candidate keys, and foreign keys?"
+          }
+        ]
+      }
+    },
+    {
+      "name": "software-architecture",
+      "questions": {
+        "easy": [
+          { "id": 1, "question": "What is a software architect?" },
+          { "id": 2, "question": "Explain what YAGNI means." },
+          {
+            "id": 3,
+            "question": "What does 'fail fast' mean in software architecture?"
+          },
+          { "id": 4, "question": "What is scalability?" },
+          { "id": 5, "question": "What is a domain-driven design?" }
+        ],
+        "medium": [
+          { "id": 6, "question": "What is Microservices Architecture?" },
+          {
+            "id": 7,
+            "question": "Explain the single responsibility principle."
+          },
+          {
+            "id": 8,
+            "question": "What is the difference between fault tolerance and fault resilience?"
+          },
+          { "id": 9, "question": "Explain the concept of back-pressure." }
+        ],
+        "difficult": [
+          {
+            "id": 10,
+            "question": "How do you ensure that the software you design is scalable and maintainable?"
+          },
+          {
+            "id": 11,
+            "question": "Describe a time when you had to make a significant architectural decision under tight deadlines."
+          },
+          {
+            "id": 12,
+            "question": "Can you discuss a project where you had to adjust the architecture due to changes in requirements?"
+          },
+          {
+            "id": 13,
+            "question": "What role does collaboration play in your work as a software architect?"
+          },
+          {
+            "id": 14,
+            "question": "Explain the CAP theorem and its implications."
+          },
+          {
+            "id": 15,
+            "question": "What are design patterns and why are they important in software architecture?"
+          }
+        ]
+      }
+    },
+    {
+      "name": "api-design",
+      "questions": {
+        "easy": [
+          { "id": 1, "question": "What is an API?" },
+          { "id": 2, "question": "What are RESTful APIs?" },
+          {
+            "id": 3,
+            "question": "What are the common HTTP methods used in APIs?"
+          },
+          { "id": 4, "question": "What is the purpose of API versioning?" },
+          {
+            "id": 5,
+            "question": "What is JSON and why is it commonly used in APIs?"
+          }
+        ],
+        "medium": [
+          {
+            "id": 6,
+            "question": "What are the principles of effective API design?"
+          },
+          { "id": 7, "question": "How do you secure an API?" },
+          { "id": 8, "question": "Explain the concept of HATEOAS in REST." },
+          {
+            "id": 9,
+            "question": "What is the importance of documentation in API design?"
+          }
+        ],
+        "difficult": [
+          {
+            "id": 10,
+            "question": "How do you handle error responses in an API?"
+          },
+          {
+            "id": 11,
+            "question": "What strategies would you use to ensure your API is scalable?"
+          },
+          {
+            "id": 12,
+            "question": "Discuss how to implement pagination and filtering in an API."
+          },
+          {
+            "id": 13,
+            "question": "How do you ensure backward compatibility when updating an API?"
+          },
+          {
+            "id": 14,
+            "question": "What are some common pitfalls in API design that should be avoided?"
+          },
+          {
+            "id": 15,
+            "question": "How can you make your API user-friendly for developers?"
+          }
+        ]
+      }
+    }
+  ]
+}

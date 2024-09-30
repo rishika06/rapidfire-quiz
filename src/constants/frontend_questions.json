@@ -1,0 +1,171 @@
+{
+  "topics": [
+    {
+      "name": "react",
+      "questions": {
+        "easy": [
+          { "id": 1, "question": "What is React?" },
+          { "id": 2, "question": "What are React components?" },
+          { "id": 3, "question": "What is JSX?" },
+          { "id": 4, "question": "How do you create a component in React?" },
+          { "id": 5, "question": "What is the role of props in React?" }
+        ],
+        "medium": [
+          { "id": 6, "question": "What is the Virtual DOM in React?" },
+          { "id": 7, "question": "What is the useState hook in React?" },
+          { "id": 8, "question": "How do you handle events in React?" },
+          {
+            "id": 9,
+            "question": "What is the difference between state and props?"
+          },
+          {
+            "id": 10,
+            "question": "How do you pass data between components in React?"
+          }
+        ],
+        "difficult": [
+          { "id": 11, "question": "What is React context and how is it used?" },
+          { "id": 12, "question": "What is code-splitting in React?" },
+          {
+            "id": 13,
+            "question": "How would you optimize performance in a large React application?"
+          },
+          {
+            "id": 14,
+            "question": "What is memoization in React, and how does it work?"
+          },
+          {
+            "id": 15,
+            "question": "How does React's reconciliation algorithm work?"
+          }
+        ]
+      }
+    },
+    {
+      "name": "javascript",
+      "questions": {
+        "easy": [
+          { "id": 16, "question": "What is JavaScript?" },
+          { "id": 17, "question": "What are variables in JavaScript?" },
+          {
+            "id": 18,
+            "question": "What is the difference between var, let, and const?"
+          },
+          { "id": 19, "question": "What are functions in JavaScript?" },
+          { "id": 20, "question": "What are arrays in JavaScript?" }
+        ],
+        "medium": [
+          {
+            "id": 21,
+            "question": "What is the difference between == and ===?"
+          },
+          { "id": 22, "question": "What are closures in JavaScript?" },
+          { "id": 23, "question": "What is the event loop in JavaScript?" },
+          {
+            "id": 24,
+            "question": "How does prototypal inheritance work in JavaScript?"
+          },
+          { "id": 25, "question": "What is a promise in JavaScript?" }
+        ],
+        "difficult": [
+          { "id": 26, "question": "What is async/await in JavaScript?" },
+          {
+            "id": 27,
+            "question": "What is a generator function in JavaScript?"
+          },
+          {
+            "id": 28,
+            "question": "How do you optimize JavaScript performance?"
+          },
+          { "id": 29, "question": "What are web workers in JavaScript?" },
+          {
+            "id": 30,
+            "question": "What is the JavaScript runtime environment?"
+          }
+        ]
+      }
+    },
+    {
+      "name": "html",
+      "questions": {
+        "easy": [
+          { "id": 31, "question": "What is HTML?" },
+          { "id": 32, "question": "What are HTML tags?" },
+          {
+            "id": 33,
+            "question": "What is the difference between <div> and <span>?"
+          },
+          { "id": 34, "question": "What is an HTML attribute?" },
+          { "id": 35, "question": "How do you create a hyperlink in HTML?" }
+        ],
+        "medium": [
+          { "id": 36, "question": "What is semantic HTML?" },
+          {
+            "id": 37,
+            "question": "What are block-level and inline elements in HTML?"
+          },
+          { "id": 38, "question": "What is the purpose of the <meta> tag?" },
+          { "id": 39, "question": "How do you embed media in HTML?" },
+          {
+            "id": 40,
+            "question": "What is the role of the <form> element in HTML?"
+          }
+        ],
+        "difficult": [
+          { "id": 41, "question": "What is accessibility in HTML?" },
+          {
+            "id": 42,
+            "question": "How do you implement SEO best practices in HTML?"
+          },
+          { "id": 43, "question": "What is the <picture> element in HTML?" },
+          {
+            "id": 44,
+            "question": "How does HTML5 differ from older versions of HTML?"
+          },
+          {
+            "id": 45,
+            "question": "How do you optimize page load speed with HTML?"
+          }
+        ]
+      }
+    },
+    {
+      "name": "css",
+      "questions": {
+        "easy": [
+          { "id": 46, "question": "What is CSS?" },
+          { "id": 47, "question": "How do you apply styles in CSS?" },
+          {
+            "id": 48,
+            "question": "What is the difference between inline, internal, and external CSS?"
+          },
+          { "id": 49, "question": "What are selectors in CSS?" },
+          { "id": 50, "question": "How do you use the box model in CSS?" }
+        ],
+        "medium": [
+          { "id": 51, "question": "What are media queries in CSS?" },
+          { "id": 52, "question": "How do you use Flexbox in CSS?" },
+          { "id": 53, "question": "What is CSS Grid?" },
+          { "id": 54, "question": "What are pseudo-classes in CSS?" },
+          { "id": 55, "question": "How do you create animations in CSS?" }
+        ],
+        "difficult": [
+          { "id": 56, "question": "What is specificity in CSS?" },
+          {
+            "id": 57,
+            "question": "How do you handle browser compatibility issues in CSS?"
+          },
+          {
+            "id": 58,
+            "question": "How do you create responsive designs with CSS?"
+          },
+          {
+            "id": 59,
+            "question": "What is a CSS preprocessor, and how do you use one?"
+          },
+          { "id": 60, "question": "How do you optimize CSS for performance?" }
+        ]
+      }
+    }
+  ]
+}
