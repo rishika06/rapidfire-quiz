@@ -7,7 +7,7 @@ interface QuestionCardProps {
 function QuestionCard({ question }: QuestionCardProps) {
   return (
     <motion.div
-      className="m-3 p-3"
+      className="text-white text-center text-3xl mt-40"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}

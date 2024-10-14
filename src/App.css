@@ -6,3 +6,34 @@
 .custom-scrollbar::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
+
+.gradient-text {
+  background: linear-gradient(to right, #209fc1, #8563db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background-image {
+  height: 100vh;
+  background: url("./assets/rapidQuiz-BG.jpg");
+  background-color: #06030c;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.diamond-gradient {
+  background: rgb(133, 99, 219);
+  background: radial-gradient(
+    circle,
+    rgba(133, 99, 219, 1) 0%,
+    rgba(71, 53, 117, 1) 100%
+  );
+  border: 1px solid #8563db;
+}
+
+.rq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: inherit;
+}

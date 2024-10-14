@@ -1,6 +1,6 @@
-import designerImage from "../assets/undraw_design_process_re_0dhf.svg";
-import backendImage from "../assets/undraw_server_cluster_jwwq.svg";
-import frontendImage from "../assets/undraw_code_review_re_woeb.svg";
+import designerImage from "../assets/Design Icon.png";
+import backendImage from "../assets/Backedn Icon.png";
+import frontendImage from "../assets/Frontend Icon.png";
 
 export const topicOptions = [
   // Frontend topics
@@ -44,12 +44,27 @@ export const difficultyOptions = [
 ];
 
 export const roles = [
-  { id: 1, title: "Backend Developer", name: "backend", image: backendImage },
+  {
+    id: 1,
+    title: "Backend",
+    value: "backend",
+    image: backendImage,
+    subText:
+      "Different areas related to frontend such as Node, Python, API Design, etc.",
+  },
   {
     id: 2,
-    title: "Frontend Developer",
-    name: "frontend",
+    title: "Frontend",
+    value: "frontend",
     image: frontendImage,
+    subText: "Different areas related to backend such as React, JS, CSS, etc.",
   },
-  { id: 3, title: "Designer", name: "designer", image: designerImage },
+  {
+    id: 3,
+    title: "UI UX",
+    value: "designer",
+    image: designerImage,
+    subText:
+      "Different areas related to UI/UX such as user reaserch, visual design etc",
+  },
 ];

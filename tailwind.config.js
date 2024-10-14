@@ -4,7 +4,14 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "custom-radial": "radial-gradient(circle, var(--tw-gradient-stops))",
+        "custom-radial-1":
+          "radial-gradient(circle at center, #209FC1 25%, #8563DB 25%, #5381CE 0%)",
+      },
+      colors: {
+        "gray-light": "var(--gray-light)",
+        "gray-dark": "var(--gray-dark)",
+        cyan: "var(--cyan)",
+        purple: "var(--purple)",
       },
     },
   },

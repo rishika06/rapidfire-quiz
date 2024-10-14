@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --gray-light: #bebbc3;
+  --gray-dark: #28262b;
+  --cyan: #209fc1;
+  --purple: #8563db;
+}
