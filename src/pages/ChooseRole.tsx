@@ -12,11 +12,11 @@ function ChooseRole({ setSelectedRole }: ChooseRoleProps) {
       <div className="rq-container">
         <span className="h-[400px] w-[400px] absolute bg-custom-radial-1 top-[-160px] right-0 filter blur-[190px] rounded-full"></span>
         <Title />
-        <div className="text-gray-light font-semibold text-xl text-center px-4 mb-16 md:mb-24">
+        <div className="text-gray-light font-semibold text-xl text-center px-4 my-6 md:mt-24">
           Select one area where you want to test your knowledge
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 m-auto max-w-[1200px] relative">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 m-auto md:h-[50%] max-w-[1200px] relative">
           {roles.map((item) => (
             <Box key={item.id}>
               <div

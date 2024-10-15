@@ -25,7 +25,7 @@ function AllQuestions({
           <div key={item.question.id}>
             <div className="text-gray-light text-lg mx-4 md:mx-8 py-3 flex justify-between">
               <div className="mb-1 md:mb-2">{item.question.question}</div>
-              <div className="pr-3 md:pr-12">{item.timeSpent}</div>
+              <div className="pr-3 pl-20 md:pr-12">{item.timeSpent}</div>
             </div>
             {index < questions.length - 1 && (
               <hr className="border-t-2 border-purple opacity-20 mx-6"></hr>

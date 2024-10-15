@@ -36,7 +36,7 @@ function Home({
 
         {!startQuiz && (
           <>
-            <div className="gradient-text font-semibold text-xl text-center mt-24 px-4">
+            <div className="gradient-text font-semibold text-xl text-center mt-12 md:mt-24 px-4">
               Please select from the below to start the quiz
             </div>
 
@@ -78,7 +78,7 @@ function Home({
         )}
 
         {/* BUTTON */}
-        <div className="absolute bottom-6 w-[100%] px-10">
+        <div className="absolute bottom-8 w-[100%] px-10 md:px-6">
           <Box className="p-4">
             {/* START BUTTON */}
             {!startQuiz && !isQuizCompleted && (
