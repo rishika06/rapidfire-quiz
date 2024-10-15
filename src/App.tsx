@@ -31,6 +31,10 @@ function App() {
   const [showAbout, setShowAbout] = useState(false);
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
 
+  const [totalTime, setTotalTime] = useState(0);
+  const [questionTimeData, setQuestionTimeData] = useState([]);
+  const [questionCompleted, setQuestionCompleted] = useState(false);
+
   const getQuestionsByRole = (role: string) => {
     switch (role) {
       case "backend":
@@ -59,16 +63,36 @@ function App() {
     if (startQuiz && !isPaused && !isQuizCompleted) {
       const interval = setInterval(() => {
         setTimer((prev) => {
+          setTotalTime((prev) => prev + 1);
           if (prev <= 0) {
+            setQuestionCompleted(true);
             if (difficulty && selectedTopicData) {
               const hasNextQuestion =
                 currentQuestion <
                 (selectedTopicData?.questions[difficulty]?.length - 1 || 0);
+
+              if (
+                difficulty &&
+                selectedTopicData &&
+                selectedTopicData?.questions[difficulty] &&
+                selectedTopicData?.questions[difficulty]?.length
+              ) {
+                const questionData = {
+                  question:
+                    selectedTopicData?.questions[difficulty][currentQuestion],
+                  timeSpent: totalTime + pausedTime,
+                };
+                setQuestionTimeData((prevData) => [...prevData, questionData]);
+              }
+
               if (hasNextQuestion) {
                 setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+                setTotalTime(0);
+                setPausedTime(0);
                 return 6;
               } else {
                 setIsQuizCompleted(true);
+
                 return 0;
               }
             }
@@ -85,6 +109,8 @@ function App() {
     selectedTopicData,
     isPaused,
     isQuizCompleted,
+    pausedTime,
+    totalTime,
   ]);
 
   // TO TRACK PAUSE TIME
@@ -103,15 +129,33 @@ function App() {
     if (
       difficulty &&
       selectedTopicData &&
+      selectedTopicData?.questions[difficulty] &&
+      selectedTopicData?.questions[difficulty]?.length
+    ) {
+      const questionData = {
+        question: selectedTopicData?.questions[difficulty][currentQuestion],
+        timeSpent: totalTime + pausedTime,
+      };
+      setQuestionTimeData((prevData) => [...prevData, questionData]);
+    }
+
+    if (
+      difficulty &&
+      selectedTopicData &&
       currentQuestion <
         (selectedTopicData?.questions[difficulty]?.length - 1 || 0)
     ) {
       setCurrentQuestion(currentQuestion + 1);
       setTimer(6);
+      setTotalTime(0);
+      setPausedTime(0);
+      setIsPaused(false);
     } else {
       setIsQuizCompleted(true);
     }
   }
+
+  console.log(timer);
 
   const resetQuiz = () => {
     setCurrentQuestion(0);
@@ -122,8 +166,8 @@ function App() {
     setTimer(6);
     setIsPaused(false);
     setPausedTime(0);
-    setQuestionTimeData([]);
     setQuestionCompleted(false);
+    setQuestionTimeData([]);
   };
 
   function startTimer() {
@@ -154,6 +198,7 @@ function App() {
       isQuizCompleted={isQuizCompleted}
       showAbout={showAbout}
       setShowAbout={setShowAbout}
+      questionTimeData={questionTimeData}
     />
   );
 }

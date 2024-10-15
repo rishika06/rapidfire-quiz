@@ -18,7 +18,6 @@ function Home({
   setDifficulty,
   startTimer,
   question,
-  showAllQuestions,
   currentQuestion,
   selectedTopicData,
   timer,
@@ -28,6 +27,7 @@ function Home({
   isQuizCompleted,
   showAbout,
   setShowAbout,
+  questionTimeData,
 }: any) {
   return (
     <div className="background-image overflow-y-scroll lg:overflow-hidden">
@@ -74,19 +74,20 @@ function Home({
           <AllQuestions
             selectedTopicData={selectedTopicData}
             difficulty={difficulty}
+            questionTimeData={questionTimeData}
           />
         )}
 
         {/* BUTTON */}
-        <div className="absolute bottom-6 w-full px-10">
-          <Box>
+        <div className="absolute bottom-6 w-[100%] px-10">
+          <Box className="p-4">
             {/* START BUTTON */}
             {!startQuiz && !isQuizCompleted && (
-              <div className="w-[97%]">
+              <div className="w-full">
                 <button
                   onClick={startTimer}
                   disabled={!topic || !difficulty}
-                  className={`diamond-gradient text-white rounded-3xl text-lg p-2 h-16 m-4 w-full ${
+                  className={`diamond-gradient text-white rounded-3xl text-lg h-16 w-full ${
                     !topic || !difficulty
                       ? "opacity-50 cursor-not-allowed"
                       : "opacity-100"
@@ -110,7 +111,7 @@ function Home({
             {/* RESET BUTTON */}
             {isQuizCompleted && (
               <button
-                className="diamond-gradient text-white rounded-3xl text-lg p-2 w-[97%] h-16 m-4"
+                className="diamond-gradient text-white rounded-3xl text-lg h-16 w-full"
                 onClick={resetQuiz}
               >
                 Restart

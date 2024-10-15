@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import StopIcon from "../assets/stop-circle.svg";
 import PauseIcon from "../assets/pause-circle.svg";
 import NextIcon from "../assets/arrow-right-circle.svg";
+import { useWindowWidth } from "../hooks/useWindowWidth";
 
 function ProgressBar({ timer }: any) {
   const [progress, setProgress] = useState(0);
@@ -30,37 +31,75 @@ function ProgressBar({ timer }: any) {
 }
 
 function ProgressMenu({ timer, resetQuiz, nextQuestion, togglePause }: any) {
+  const width = useWindowWidth();
+  const breakpoint = 768;
+
   return (
-    <div className="flex justify-between items-center h-24 px-6 opacity-30 hover:opacity-100 cursor-pointer transition duration-300 ease-in-out">
-      <div className="flex-shrink-0">
-        <img
-          src={StopIcon}
-          alt="stop icon"
-          className="cursor-pointer"
-          onClick={resetQuiz}
-        />
-      </div>
+    <>
+      {width < breakpoint ? (
+        // FOR MOBILE
+        <div className="flex flex-col">
+          <div className="flex items-center gap-4">
+            <ProgressBar timer={timer} />
+            <div className="text-cyan text-xl">{timer}</div>
+          </div>
 
-      <div className="flex items-center gap-4">
-        <ProgressBar timer={timer} />
-        <div className="text-cyan text-xl">{timer}</div>
-      </div>
+          <div className="flex justify-between mt-4">
+            <img
+              src={StopIcon}
+              alt="stop icon"
+              className="cursor-pointer h-7"
+              onClick={resetQuiz}
+            />
 
-      <div className="flex items-center gap-16">
-        <img
-          src={PauseIcon}
-          alt="pause icon"
-          className="cursor-pointer"
-          onClick={togglePause}
-        />
-        <img
-          src={NextIcon}
-          alt="next icon"
-          className="cursor-pointer"
-          onClick={nextQuestion}
-        />
-      </div>
-    </div>
+            <img
+              src={PauseIcon}
+              alt="pause icon"
+              className="cursor-pointer h-7"
+              onClick={togglePause}
+            />
+            <img
+              src={NextIcon}
+              alt="next icon"
+              className="cursor-pointer h-7"
+              onClick={nextQuestion}
+            />
+          </div>
+        </div>
+      ) : (
+        // FOR TABLET AND LAPTOP
+        <div className="flex justify-between items-center h-24 px-6 opacity-30 hover:opacity-100 cursor-pointer transition duration-300 ease-in-out">
+          <div className="flex-shrink-0">
+            <img
+              src={StopIcon}
+              alt="stop icon"
+              className="cursor-pointer"
+              onClick={resetQuiz}
+            />
+          </div>
+
+          <div className="flex items-center gap-4">
+            <ProgressBar timer={timer} />
+            <div className="text-cyan text-xl">{timer}</div>
+          </div>
+
+          <div className="flex items-center gap-16">
+            <img
+              src={PauseIcon}
+              alt="pause icon"
+              className="cursor-pointer"
+              onClick={togglePause}
+            />
+            <img
+              src={NextIcon}
+              alt="next icon"
+              className="cursor-pointer"
+              onClick={nextQuestion}
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 
