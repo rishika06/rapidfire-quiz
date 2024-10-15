@@ -1,6 +1,6 @@
 import verion1Image from "../assets/version 1.png";
-import verion2Image from "../assets/version 2.png";
-import verion3Image from "../assets/version 3.png";
+// import verion2Image from "../assets/version 2.png";
+// import verion3Image from "../assets/version 3.png";
 
 import Rapid from "../assets/rapidFire.png";
 import Quiz from "../assets/Quiz.png";
