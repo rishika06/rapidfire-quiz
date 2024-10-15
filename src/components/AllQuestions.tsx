@@ -1,17 +1,5 @@
 import { motion } from "framer-motion";
 import Box from "./Box";
-interface Question {
-  id: number;
-  question: string;
-}
-
-interface TopicData {
-  questions: {
-    easy: Question[];
-    medium: Question[];
-    difficult: Question[];
-  };
-}
 
 function AllQuestions({
   selectedTopicData,
