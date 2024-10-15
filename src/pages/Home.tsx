@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "../components/Title";
 import Box from "../components/Box";
 import TopicOptions from "../components/TopicOptions";
@@ -124,7 +123,7 @@ function Home({
       </div>
       {!selectedRole && <ChooseRole setSelectedRole={setSelectedRole} />}
       {/* ABOUT PAGE */}
-      {showAbout && <About setShowAbout={setShowAbout} />}
+      {showAbout && <About />}
     </div>
   );
 }

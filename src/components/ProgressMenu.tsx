@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import StopIcon from "../assets/stop-circle.svg";
 import PauseIcon from "../assets/pause-circle.svg";
 import NextIcon from "../assets/arrow-right-circle.svg";

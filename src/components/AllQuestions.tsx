@@ -13,11 +13,6 @@ interface TopicData {
   };
 }
 
-interface AllQuestionsProps {
-  selectedTopicData?: TopicData | undefined;
-  difficulty: "easy" | "medium" | "difficult";
-}
-
 function AllQuestions({
   selectedTopicData,
   difficulty,

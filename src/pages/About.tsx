@@ -1,18 +1,13 @@
-import { FaRegWindowClose } from "react-icons/fa";
 import verion1Image from "../assets/version 1.png";
 import verion2Image from "../assets/version 2.png";
 import verion3Image from "../assets/version 3.png";
-import heart from "../assets/undraw_heart.svg";
-import { motion } from "framer-motion";
+
 import Rapid from "../assets/rapidFire.png";
 import Quiz from "../assets/Quiz.png";
 import Bolt from "../assets/Bolt Icon.png";
 import Box from "../components/Box";
-interface AboutProps {
-  setShowAbout: (showAbout: boolean) => void;
-}
 
-function About({ setShowAbout }: AboutProps) {
+function About() {
   return (
     <div className="bg-[#06030C] absolute inset-0 h-full overflow-y-scroll ">
       <div className="rq-container bg-[#06030C] ">

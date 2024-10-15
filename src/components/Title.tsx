@@ -4,12 +4,14 @@ import Bolt from "../assets/Bolt Icon.png";
 import InfoSvg from "../assets/info.svg";
 
 interface TitleProps {
-  setShowAbout: (showAbout: boolean) => void;
+  setShowAbout?: (showAbout: boolean) => void;
 }
-
 function Title({ setShowAbout }: TitleProps) {
   return (
-    <div className="p-6 cursor-pointer" onClick={() => setShowAbout(true)}>
+    <div
+      className="p-6 cursor-pointer"
+      onClick={() => setShowAbout && setShowAbout(true)}
+    >
       <div className="flex items-center gap-1">
         <img src={Rapid} alt="Rapid" className="object-cover" />
         <img src={Bolt} alt="Bolt Icon" className="object-cover" />
