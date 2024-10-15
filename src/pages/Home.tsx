@@ -29,7 +29,7 @@ function Home({
   questionTimeData,
 }: any) {
   return (
-    <div className="background-image overflow-y-scroll lg:overflow-hidden">
+    <div className="background-image">
       <div className="rq-container">
         <span className="h-[400px] w-[400px] absolute bg-custom-radial-1 top-[-160px] right-0 filter blur-[190px] rounded-full"></span>
         <Title setShowAbout={setShowAbout} />
