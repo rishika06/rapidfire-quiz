@@ -199,6 +199,7 @@ function App() {
       showAbout={showAbout}
       setShowAbout={setShowAbout}
       questionTimeData={questionTimeData}
+      isPaused={isPaused}
     />
   );
 }

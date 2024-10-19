@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import StopIcon from "../assets/stop-circle.svg";
 import PauseIcon from "../assets/pause-circle.svg";
 import NextIcon from "../assets/arrow-right-circle.svg";
+import PlayIcon from "../assets/play-circle.svg";
 import { useWindowWidth } from "../hooks/useWindowWidth";
 
 function ProgressBar({ timer }: any) {
@@ -30,9 +31,17 @@ function ProgressBar({ timer }: any) {
   );
 }
 
-function ProgressMenu({ timer, resetQuiz, nextQuestion, togglePause }: any) {
+function ProgressMenu({
+  timer,
+  resetQuiz,
+  nextQuestion,
+  togglePause,
+  isPaused,
+}: any) {
   const width = useWindowWidth();
   const breakpoint = 768;
+
+  console.log(togglePause);
 
   return (
     <>
@@ -53,11 +62,12 @@ function ProgressMenu({ timer, resetQuiz, nextQuestion, togglePause }: any) {
             />
 
             <img
-              src={PauseIcon}
-              alt="pause icon"
+              src={isPaused ? PauseIcon : PlayIcon}
+              alt="play and pause icon"
               className="cursor-pointer h-7"
               onClick={togglePause}
             />
+
             <img
               src={NextIcon}
               alt="next icon"
@@ -85,8 +95,8 @@ function ProgressMenu({ timer, resetQuiz, nextQuestion, togglePause }: any) {
 
           <div className="flex items-center gap-16">
             <img
-              src={PauseIcon}
-              alt="pause icon"
+              src={isPaused ? PlayIcon : PauseIcon}
+              alt="play and pause icon"
               className="cursor-pointer"
               onClick={togglePause}
             />

@@ -3,16 +3,22 @@ import Title from "../components/Title";
 import Box from "../components/Box";
 
 interface ChooseRoleProps {
+  showAbout: boolean;
+  setShowAbout?: (showAbout: boolean) => void;
   setSelectedRole: (name: string) => void;
 }
 
-function ChooseRole({ setSelectedRole }: ChooseRoleProps) {
+function ChooseRole({
+  // showAbout,
+  setShowAbout,
+  setSelectedRole,
+}: ChooseRoleProps) {
   return (
     <div className="background-image absolute inset-0 overflow-y-scroll lg:overflow-hidden">
       <div className="rq-container">
         <span className="h-[400px] w-[400px] absolute bg-custom-radial-1 top-[-160px] right-0 filter blur-[190px] rounded-full"></span>
-        <Title />
-        <div className="text-gray-light font-semibold text-xl text-center px-4 my-6 md:mt-24">
+        <Title setShowAbout={setShowAbout} />
+        <div className="text-gray-light font-semibold text-xl text-center px-4 my-6 md:my-12">
           Select one area where you want to test your knowledge
         </div>
 
@@ -20,7 +26,7 @@ function ChooseRole({ setSelectedRole }: ChooseRoleProps) {
           {roles.map((item) => (
             <Box key={item.id}>
               <div
-                className="relative flex flex-col justify-center items-center gap-[24px] cursor-pointer w-[250px] h-[250px] xl:w-[325px] xl:h-[325px]"
+                className="relative flex flex-col justify-center items-center gap-[24px] cursor-pointer w-[250px] h-[250px] xl:w-[300px] xl:h-[300px]"
                 onClick={() => setSelectedRole(item.value)}
               >
                 <span className="h-[150px] w-[150px] absolute top-0 diamond-gradient filter blur-[100px] rounded-full"></span>

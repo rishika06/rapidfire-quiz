@@ -27,6 +27,7 @@ function Home({
   showAbout,
   setShowAbout,
   questionTimeData,
+  isPaused,
 }: any) {
   return (
     <div className="background-image">
@@ -36,7 +37,7 @@ function Home({
 
         {!startQuiz && (
           <>
-            <div className="gradient-text font-semibold text-xl text-center mt-12 md:mt-24 px-4">
+            <div className="gradient-text font-semibold text-xl text-center mt-12 md:mt-12 md:mb-20 px-4">
               Please select from the below to start the quiz
             </div>
 
@@ -104,6 +105,7 @@ function Home({
                 resetQuiz={resetQuiz}
                 nextQuestion={nextQuestion}
                 togglePause={togglePause}
+                isPaused={isPaused}
               />
             )}
 
@@ -121,9 +123,15 @@ function Home({
 
         {/*CHOOSE ROLE  */}
       </div>
-      {!selectedRole && <ChooseRole setSelectedRole={setSelectedRole} />}
+      {!selectedRole && (
+        <ChooseRole
+          showAbout={showAbout}
+          setShowAbout={setShowAbout}
+          setSelectedRole={setSelectedRole}
+        />
+      )}
       {/* ABOUT PAGE */}
-      {showAbout && <About />}
+      {showAbout && <About setShowAbout={setShowAbout} />}
     </div>
   );
 }
